@@ -1,0 +1,122 @@
+/*allows you to store variables in here and call upon them easily*/
+:root{
+    --background-color: #ee82ee; /*violet*/
+    --text-color: #ff0000; /*red*/
+    --h1-text-color: #ffc0cb; /*pink*/
+    --a-text-color: #ffffff; /*white*/
+    --hover-color: #800080; /*purple*/
+    --bullet-point-color: #4b0082; /*indigo*/
+    --borderbox-color:#e6e6fa; /*Lavender*/
+}
+
+body{
+    /*1st new prop*/
+    scroll-behavior: smooth;
+    background-color: var(--background-color);
+    margin: 0px;
+    /*top right bottom left */
+    padding: 70px 60px 0px 60px;
+}
+
+/*
+descendant selector, h2 is a child of main
+(putting main in front of h2 selects all h2's from main)
+*/
+header h1{
+    color: var(--h1-text-color);
+    font-size: 75px;
+    font-style: italic;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 0px 0px 0px;
+}
+
+header h2{
+    color: var(--text-color);
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0px 30px 0px;
+}
+
+nav a{
+    font-weight: 900;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0px 20px 0px 0px;
+    /*text-decore gets rid of the underline or can add an underline*/
+    text-decoration: none;
+    color: var(--a-text-color);
+    /*2nd new prop*/
+    transition: 0.4s;
+}
+
+/*
+psuedo selector
+allows for the user to change the color of the text when the mouse hovers over the text
+*/
+
+nav a:hover{
+    color: var(--hover-color);
+    text-decoration: underline;
+    font-size: 27px;
+}
+
+main h2{
+    color: var(--text-color);
+}
+
+main img{
+    height: 300px;
+    width: 300px;
+    margin: 15px 0px 20px 0px;
+    transition: 1s;
+    /*3rd new prop*/
+    border: 10px solid #e6e6fa;
+}
+
+main img:hover{
+    height: 350px;
+    width: 350px;
+}
+
+main .image-box{
+    /*4th - 8th new prop*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center ;
+}
+
+/*targets both the p and blockquote tags so that they share the same font family
+without having to use up more space in creating two seperate selectors*/
+main p, blockquote{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main ul, li{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main li::marker{
+    color: var(--bullet-point-color);
+}
+
+footer .copyright{
+    /*9th - 10th new prop*/
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
