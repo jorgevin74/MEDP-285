@@ -1,0 +1,111 @@
+:root{
+    --background-color:#D3D3D3;
+    --box-background-color: #808080;
+    --header-background-color: #708090;
+    --nav-background-color: #36454F;
+    --main-background-color: #A9A9A9;
+    --footer-background-color: #BBBBBB;
+    --article-background-color: #333333;
+    --section-background-color: #7f7d9c;
+}
+
+body{
+    background-image: url(images/backgroundimg.jpg);
+    background-position: center;
+    padding: 20px 100px;
+    scroll-behavior: smooth;
+    font-style: 600;
+    font-family: sigmar;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+}
+
+body .history_home_gallery{
+    background-image: url(images/week04_img.jpg);
+}
+
+#wrapper{
+    background-color: var(--box-background-color);
+}
+
+header{
+    background-color: var(--header-background-color);
+    padding: 20px;
+}
+
+nav{
+    background-color: var(--nav-background-color);
+    padding: 10px;
+    text-align: center;
+}
+
+nav li{
+    /*links were stacked and was blocked but inline makes it all in one line just like this comment (it goes across the screen next to each other)*/
+    display: inline;
+    margin: 0px 40px;
+    scroll-behavior: smooth;
+    font-style: 800;
+    font-family: sigmar;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+    font-optical-sizing: auto;
+    text-transform: uppercase ;
+    font-size: 22px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color:darkred;
+    text-decoration: underline;
+}
+
+main{
+    background-color: var(--main-background-color); 
+}
+
+section{
+    background-color: var(--section-background-color);
+    padding: 40px;
+}
+
+section a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+section a:hover{
+    color: darkred;
+    text-decoration: underline;
+
+}
+
+.images .image-box{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+}
+
+.images ,.image-box img{
+    margin-bottom: 30px;
+}
+
+
+
+article{
+    background-color: var(--article-background-color);
+    padding: 10px 80px;
+    border: #000 dashed 2px;
+    margin: 20px 0px;
+    /*top - bottom*/
+}
+
+footer{
+    background-color: var(--footer-background-color);
+    text-align: center;
+}
