@@ -1,0 +1,271 @@
+:root{
+    --body-background-color: #F2F2F2;
+    --wrapper-background-color: #565959;
+    --header-background-color: #565959;
+    --main-background-color: #BFBFBF;
+    --nav-background-color: #202426;
+    --aside-background-color: #00010D;
+    --footer-background-color: darkgray;
+}
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background-color);
+    font-family: ubuntu;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#wrapper{
+    margin: 0px auto;
+    /*center the wrapper*/
+
+    background-color: var(--wrapper-background-color);
+    color: white;
+
+    max-width: 1000px;
+    /*max-width is equal to 100 % (1000px = 100%)*/
+
+    display: flex;
+    /*uses flex box*/
+
+    flex-wrap: wrap;
+    /*wrap flex items inside the wrapper*/
+
+}
+
+/* add padding to all of the wrapper child elements*/
+#wrapper>* {
+    padding: 20px;
+}
+
+
+
+/*Header Properties*/
+
+header{
+    background-color: var(--header-background-color);
+    flex: 1 0 100%;
+    /* grow on, shrink off, span the width of the wrapper*/
+    order: 1;
+    /*display the order where you want certain sections to go despite of html structure*/
+}
+
+
+/*MAIN PROPERTIES*/
+
+main{
+    background-color: var(--main-background-color);
+    flex: 1 1 500px;
+    order: 3;
+}
+
+main img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+main h2{
+    margin-bottom: 15px;
+}
+
+main p, main ol, main ul {
+    margin-bottom: 20px;
+}
+
+main a{
+    text-decoration: none;
+    color:#565959;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color:#202426;
+}
+
+
+
+/*NAV PROPERTIES*/
+
+nav{
+    background-color: var(--nav-background-color);
+    flex: 1 0 150px;
+    /*grow, but not shrink less than basis (200px)*/
+    order: 2;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: darkgray;
+    background-color: black;
+    width: 150px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    color: gray;
+}
+
+nav h2{
+    margin-bottom: 10px;
+}
+
+
+/*ASIDE PROPERTIES*/
+
+aside{
+    background-color: var(--aside-background-color);
+    flex: 1 0 150px;
+    /*grow, but can not shrink less than basis (200px)*/
+    order: 4;
+}
+
+aside a{
+    text-decoration: none;
+    color: white;
+}
+
+aside .gnx:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+aside .morale:hover{
+    color: #341c02;
+    text-decoration: underline;
+}
+
+aside .damn:hover{
+    color: darkred;
+    text-decoration:underline;
+}
+
+aside .butterfly:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+aside .goodkid:hover{
+    color: #5670BF;
+    text-decoration: underline;
+}
+
+aside .section-80:hover{
+    color:#BFB084;
+    text-decoration: underline;
+}
+
+
+/*FOOTER PROPERTIES*/
+
+footer{
+    background-color: var(--footer-background-color);
+    flex: 1 0 100%;
+    /* grow on, shrink off, span width of wrapper*/
+    order: 5;
+}
+
+
+/*MISCELLANOUS PROPERTIES*/
+
+.img-box{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.descript-text{
+    visibility: hidden;
+    background-color: black;
+    bottom: 15px;
+    left: 50%;
+    position: absolute;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 12px;
+    transform: translateX(-50%);
+    overflow: hidden;
+    white-space: nowrap;
+
+    /*for future idea
+    text-overflow: ellipsis;
+    cursor: pointer;
+    */
+}
+
+.img-box:hover .descript-text{
+    visibility: visible;
+}
+
+img{
+    border: ridge 15px #565959;
+    width: 100%;
+}
+
+/*POSSIBLE ZOOM IN EFFECT 
+    transition: 0.5s ease;
+
+
+.img-box:hover img{
+    transform: scale(1.1);
+    border: none;
+}
+*/
+
+@media (max-width: 705px){
+
+    nav ul{
+    display: flex;
+    flex-direction: row;
+    }
+
+    nav li{
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        margin-right: 5px;
+    }
+
+    nav h2{
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
