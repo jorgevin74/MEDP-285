@@ -1,0 +1,192 @@
+:root{
+  --background-color: #E9DBBD;
+  --header-background-color: #6F4E37;
+  --main-background-color:#FFEBCD;
+  --nav-background-color:#AC8051;
+  --aside-background-color:#F5F5DC;
+  --footer-background-color:#8A3324;
+  --button-color:#BE9464;
+  --img-border: #8B4513;
+}
+
+
+
+/* border-box fix */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  /* remove margin and padding on body */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+/* Grouping example */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}
+
+.wrapper {
+  background: var(--background-color);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto;
+  /*grid layout parent*/
+  display: grid;
+  /*create 12 col layout*/
+  grid-template-columns: repeat(12, minmax(0,1fr));
+  /*repeat allows you to create those 12 columns and each occupy a maximum of one fractional unit (1fr)*/
+}
+
+/* padding on immediate children of wrapper */
+.wrapper>* {
+  padding: 20px;
+}
+
+header {
+  background: var(--header-background-color);
+  /*span all 12 columns (the / stands for through so 1-13)*/
+  grid-column: 1/13;
+  text-align: center;
+}
+
+header h1{
+  color: #FFF;
+}
+
+main {
+  background: var(--main-background-color);
+  /*span 6 columns*/
+  grid-column: 1/10;
+}
+
+main img{
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+img{
+  border: inset 20px var(--img-border);
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+}
+
+
+main .video_1, .video_2, .video_3 {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto; 
+  margin-bottom: 20px; 
+  box-sizing: border-box; 
+  display: block; 
+  margin-top: 15px;
+  border: ridge 20px var(--img-border);
+}
+
+main h4{
+  margin-top: 30px;
+}
+
+
+main ol li, ul li{
+  margin-bottom: 5px;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  /*span 3 columns*/
+  grid-column: 1/13;
+  grid-row: 2/3;
+}
+
+nav ul{
+  display: flex;
+  justify-content: center;
+}
+
+nav li{
+  display: inline-block;
+  background-color: var(--button-color);
+  width: 250px;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0px 20px 0px 0px;
+}
+
+nav a{
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover{
+  color: #000;
+  text-decoration: underline;
+}
+
+aside {
+  background-color: var(--aside-background-color);
+  /*span 3 columns*/
+  grid-column: 10/13;
+}
+
+aside ul li{
+  margin-top: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+
+aside ul li:hover{
+  color: #8A3324;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--footer-background-color);
+  /*span all 12 columns (the / stands for through so 1-13)*/
+  grid-column: 1/13;
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 705px) {
+  nav ul{
+      display: flex;
+      flex-direction: row;
+  }
+  
+  nav li{
+      background-color: var(--button-color);
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      margin-right: 15px;
+      border-radius: 10px;
+      text-align: center;
+      white-space: nowrap;
+  }
+  
+}
