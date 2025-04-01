@@ -1,0 +1,374 @@
+:root{
+    --background-color: #fff;
+    --background-color2: #000;
+    --header-background-color: #d6dee8;
+    --main-background-color: #879fbf;
+    --aside-background-color:#6d89b0;
+    --footer-background-color: #234f89;
+    --hover-background-color:#c0c0c0;
+    --hover-text-color: #fff;
+    --font-color-1: #fff;
+    --font-color-2: #000;
+    --font-family: "Koh Santepheap";
+
+}
+
+/* border-box fix */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--font-family);
+    margin: 0;
+
+}
+
+/*Wrapper Selectors For Flex*/
+
+#wrapper_flex{
+    margin: 0px auto;
+    background-color: var(--background-color);
+    color: var(--font-color-1);
+    max-width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+#wrapper_flex>* {
+    padding: 20px;
+}
+
+
+/*Header / Nav Selectors & Their Properties*/
+
+header{
+    background-color: var(--header-background-color);
+    display: flex;
+    order: 1;
+    flex: 1 1 100%;
+    white-space: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-color-2);
+}
+
+header h1{
+    margin-left: 15px;
+}
+
+
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header ul li{
+    margin-right: 20px;
+    /*this is here so that the buttons when hovered on have their position altered*/
+    border: solid 10px transparent;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+header ul a{
+    text-decoration: none;
+    color: var(--font-color-2);
+}
+
+header ul a:hover{
+    color: var(--hover-text-color);
+
+}
+
+header ul li:hover{
+    border: solid 10px var(--hover-background-color);
+    border-radius: 10px;
+    background-color: var(--hover-background-color);
+}
+
+header div#animate_header{
+    animation-name: header_slide;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-direction: forwards;
+    position:relative;
+}
+
+@keyframes header_slide {
+    0%{
+        top: -50px
+    }
+
+    100%{
+        top: 0px;
+    }
+}
+
+header nav#animate_nav{
+    animation-name: nav_slide;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-direction: forwards;
+    position:relative;
+}
+
+@keyframes nav_slide {
+    0%{
+        top: -50px
+    }
+
+    100%{
+        top: 0px;
+    }
+}
+
+
+header ul li{
+    margin-right: 20px;
+}
+
+
+
+
+/*Main Selectors & Their Properties*/
+
+main{
+    background-color: var(--main-background-color);
+    order: 2;
+    flex: 1 1 70%;
+    color: var(--font-color-2);
+}
+
+main h2, h3,p{
+    margin-left: 15px;
+}
+
+main ol li{
+    margin-bottom: 50px;
+}
+
+main .slider {
+    display: block;          
+    max-width: 80%;         
+    max-height: 400px;       
+    height: auto;            
+    margin: 20px auto;      
+}
+
+/* Styling for poster (vertical) images */
+main .poster {
+    display: block;          
+    max-width: 90%;         
+    max-height: 600px;      
+    height: auto;            
+    margin: 20px auto;
+
+}
+
+
+main div#image_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;     /* Allows items to wrap to the next row if needed */
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;            
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--background-color);
+}
+
+th, td {
+    border: 1px solid var(--background-color2); 
+    padding: 10px;           
+    text-align: left;        
+    background-color: var(--background-color); 
+}
+
+th {
+    background-color: var(--background-color); 
+    font-weight: bold;       
+}
+
+tr:nth-child(even) {
+    background-color: var(--background-color); 
+}
+      
+
+
+
+
+
+
+
+/*Aside Selectors & Their Properties*/
+
+aside {
+    background-color: var(--aside-background-color);
+    order: 3;
+    flex: 1 0 20%;
+    color: var(--font-color-2);
+    box-sizing: border-box;        
+    padding: 0;        
+    margin: 0;             
+}
+aside a{
+    text-decoration: none;
+    color: var(--font-color-2);
+    width: 100%;
+}
+
+
+aside h4 {
+    display: block;                
+    width: 100%;                    
+    margin: 0;                     
+    padding: 10px;                      
+    border: 10px solid transparent;
+    background-color: transparent;
+}
+
+aside h4:hover {
+    border: 10px solid var(--hover-background-color);
+    border-radius: 3px;
+    background-color: var(--hover-background-color);
+    color: var(--hover-text-color);
+}
+
+aside div#animate_aside{
+    animation-name: aside_animation;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-direction: forwards;
+    position:relative;
+}
+
+
+@keyframes aside_animation {
+    0%{
+        right: -200px
+    }
+
+    100%{
+        right: 0px;
+    }
+}
+
+
+
+
+/*Footer Selectors & Their Properties*/
+
+footer{
+    background-color: var(--footer-background-color);
+    order: 4;
+    flex: 1 0 100%;
+    margin-bottom: 0px;
+}
+
+
+
+/*Wrapper Selector For Grid And Everything Else For Grid Layout*/
+
+#wrapper_grid{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+}
+
+#wrapper_grid>* {
+    padding: 20px;
+}
+
+#wrapper_grid header{
+    grid-column: 1/13;
+}
+
+#wrapper_grid main{
+    grid-column: 1/10;
+    color: var(--font-color-2);
+}
+
+#wrapper_grid main h3{
+    margin-left: 15px;
+}
+
+#wrapper_grid main ul li{
+    margin-left: 15px;
+}
+
+  
+#wrapper_grid aside{
+    grid-column: 10/13;
+    color: var(--font-color-2);
+}
+
+#wrapper_grid footer{
+    grid-column: 1/13;
+    color: var(--font-color-1);
+}
+
+
+
+
+
+/*Media Inquiries*/
+
+@media (max-width: 705px) {
+    header{
+        flex-direction: column;
+        transition: smooth;
+    }
+    main {
+        flex-direction: column; 
+        align-items: center;    
+    }
+    main h2,p{
+        margin-left: 0px;
+    }
+    aside{
+        flex: 1 0 100%;
+    }
+    aside h2,h4{
+        margin-left: 0px;
+    }
+    footer{
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 705px) {
+    #wrapper_grid main{
+        grid-column: 1/13;
+    }
+    #wrapper_grid aside{
+        grid-column: 1/13;
+    }
+}
+
+
