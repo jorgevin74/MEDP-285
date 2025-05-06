@@ -1,0 +1,59 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+.wrapper{
+    margin: 0px auto;
+    /*center the wrapper*/
+
+    background-color: var(--wrapper-background-color);
+    color: white;
+
+    max-width: 1000px;
+    /*max-width is equal to 100 % (1000px = 100%)*/
+
+    display: flex;
+    /*uses flex box*/
+
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    /*wrap flex items inside the wrapper*/
+
+}
+
+.wrapper>*{
+    padding: 30px;
+}
+
+nav, main, aside, footer{
+    text-align: center;
+}
+
+nav{
+    background-color: black;
+    order: 1;
+}
+
+main{
+    background-color: purple;
+    order: 2;
+}
+
+aside{
+    background-color: blue;
+    order: 3;
+}
+
+footer{
+    background-color: brown;
+    order: 4;
+}
+
