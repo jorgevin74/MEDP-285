@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Video Game Store</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="animate_nav">
+            <h1>Jorge's VideoGame Store</h1>
+            </div>
+            
+            <div class="animate_nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li>
+                    <span class="selected" onclick="toggleDropdown()">GAME LIBRARY <i
+                            class="fas fa-angle-down"></i></span>
+                    <ul id="genreDropdown" class="dropdown-menu">
+                        <li><a href="rpg.html">RPG</a></li>
+                        <li><a href="action_adventure.html">Action/Adventure</a></li>
+                        <li><a href="horror.html">Horror</a></li>
+                        <li onclick="shakeScreen()">Shooter</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="checkout"><a href="checkout.html">CHECKOUT</a></span>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+        <section>
+            <h1>Shooter</h1>
+            <h3>This genre is all about shooting, if you are a fan of hack-and-slash games, want something relaxing yet
+                engaging, these games are perfect for you. They are mostly played in first-person perspective but can
+                sometimes switch to third-person.</h3>
+            <img src="images/shooter banner.png" alt="shooter banner full cover art">
+        </section>
+
+        <main>
+            <h2 class="best-sellers">PS5 Games:</h2>
+            <div class="game-img-box">
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/doom the dark ages.png" alt="doom the dark ages game cover">
+                        <h3 class="game-title">DOOM: The Dark Ages</h3>
+                        <h3 class="game-price">$69.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/rainbow 6 siege.png" alt="Rainbow 6 Siege game cover">
+                        <h3 class="game-title">Rainbow 6 Siege</h3>
+                        <h3 class="game-price">$39.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/deathloop.png" alt="deathloop game cover">
+                        <h3 class="game-title">Deathloop</h3>
+                        <h3 class="game-price">$59.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/squirrel with gun].png" alt="squirrel with a gun game cover">
+                        <h3 class="game-title">Squirrel With A Gun</h3>
+                        <h3 class="original-price"><s>$19.99</s></h3>
+                        <h3 class="game-price">$12.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/battlefield 2042.png" alt="battlefield 2042 game cover">
+                        <h3 class="game-title">Battlefield 2042</h3>
+                        <h3 class="game-price">$69.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="popular">PS4 Games / Other System Games:</h2>
+            <div class="game-img-box">
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/doom.png" alt="doom game cover">
+                        <h3 class="game-title">DOOM</h3>
+                        <h3 class="game-price">$19.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/ghost recon wildlands.png" alt="ghost recon wildlands game cover">
+                        <h3 class="game-title">Ghost Recon: Wildlands</h3>
+                        <h3 class="game-price">$49.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/Just Cause 4.png" alt="Just Cause 4 game cover">
+                        <h3 class="game-title">Just Cause 4</h3>
+                        <h3 class="game-price">$39.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/splatoon3.png" alt="splatoon 3 game cover">
+                        <h3 class="game-title">Splatoon 3</h3>
+                        <h3 class="game-price">$69.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/the division 2.png" alt="The Division 2 game cover">
+                        <h3 class="game-title">The Division 2</h3>
+                        <h3 class="game-price">$29.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <form id="newsletterForm">
+                <h2>Sign Up For Our News Letter</h2>
+                <h5>Please Enter Your Email Address So You're The First To Know For Our Latest Updates</h5>
+                <input type="email" id="emailInput" name="email" placeholder="emailexample@gmail.com" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </aside>
+
+        <footer>
+            <h2>&copy;Jorge Auquilla Copyright 2025</h2>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

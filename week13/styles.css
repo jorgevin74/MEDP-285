@@ -1,0 +1,461 @@
+:root {
+    --nav-background-color: #778da9;
+    --nav-button-background-color: #e0e1dd;
+    --nav-button-hover-background-color: #808080;
+    --main-background-color: #f2efef;
+    --main-game-background-color: #8d99ae;
+    --main-sale-price-color: #d90429;
+    --main-checkout-game-background-color:#8ecae6;
+    --main-checkout-button-color:#007ACC;
+    --main-checkout-button-hover-color:#005f99;
+    --main-notification-background-color:#008000;
+    --contact-background-color: #1b263b;
+    --footer-background-color: #001d3d;
+    --text-color1: #ffffff;
+    --text-color2: #000;
+    --font-family: "Libre Caslon Text";
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0px auto;
+    background-color: var(--wrapper-background-color);
+    color: var(--text-color1);
+    max-width: 1900px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: var(--font-family);
+}
+
+
+/*NAV BAR SELECTORS*/
+
+nav,
+main,
+aside,
+footer {
+    text-align: center;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    order: 1;
+    padding: 30px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--text-color2);
+}
+
+nav h1 {
+    margin-left: 40px;
+}
+
+nav li {
+    list-style: none;
+    text-decoration: none;
+    color: var(--text-color2);
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+    background-color: var(--nav-button-background-color);
+}
+
+nav li:hover {
+    background-color: var(--nav-button-hover-background-color);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-decoration: none
+}
+
+nav span {
+    cursor: pointer;
+}
+
+nav .animate_nav{
+    animation-name: header_slide;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-direction: forwards;
+    position:relative;
+}
+
+@keyframes header_slide {
+    0%{
+        left: -50px
+    }
+
+    100%{
+        left: 0px;
+    }
+}
+
+.selected {
+  position: relative; 
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 15px;;
+    right: 31.5%;
+
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: var(--text-color2);
+}
+
+
+
+/* SECTION SELECTORS */
+section {
+    order: 2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    transition: 1s;
+    display: block;
+    margin: 0;
+    opacity: 0.85;
+    z-index: 1;
+}
+
+section h1 {
+    color: var(--text-color1);
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+section h3 {
+    color:var(--text-color1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 100px 100px 1000px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+
+/*MAIN SELECTORS*/
+main {
+    background-color: var(--main-background-color);
+    order: 3;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main .game-title {
+    position: relative;
+    margin-bottom: -10px;
+}
+
+main .original-price {
+    position: relative;
+    color: var(--main-sale-price-color);
+    right: 20%;
+    bottom: 0.9%;
+    margin-bottom: -44px;
+
+}
+
+main .game-price {
+    position: relative;
+}
+
+main .game-img-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+main .game-img-box .game-area {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(20% - 20px);
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: var(--main-game-background-color);
+    align-items: center;
+}
+
+main .game-img-box img {
+    width: 100%;
+    height: auto;
+    transition: 1s;
+    display: block;
+    margin: 0;
+}
+
+main .best-sellers {
+    margin-top: 30px;
+    color: var(--text-color2);
+}
+
+main .popular {
+    margin-top: 60px;
+    color: var(--text-color2);
+}
+
+main .game-img-box button {
+    height: 40px;
+    width: 180px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+main .game-img-box button:hover {
+    background-color: var(--nav-button-hover-background-color);
+}
+
+
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-notification-background-color);
+  color: var(var(--text-color1));
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 1000;
+  display: none; 
+}
+
+
+main .animate-game{
+    animation-name: main_slide;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-direction: forwards;
+    position:relative;
+}
+
+@keyframes main_slide {
+    0%{
+        left: -50px
+    }
+
+    100%{
+        left: 0px;
+    }
+}
+
+main h1{
+    color: var(--text-color2);
+    margin-top: -30px;
+}
+
+main .checkoutContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-game-background-color);
+  padding: 30px;
+}
+
+main .checkoutContainer .checkout-game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 30px;
+  background-color: var(--main-checkout-game-background-color);
+  border-radius: 5px;
+}
+
+main .checkoutContainer img{
+  width: 250px; 
+  height: auto;
+  margin-right: 20px;
+}
+
+main .checkoutContainer .checkout-game-details {
+  display: flex;
+  flex-direction: column;
+}
+
+main .checkout-original-price{
+    color:var(--main-sale-price-color);
+}
+
+
+main .checkoutContainer .checkout-game-details h3 {
+  margin: 5px 0;
+}
+
+main .checkoutContainer .checkout-add-to-cart {
+  width: fit-content;
+  padding: 8px 16px;
+  background-color: var(--main-checkout-button-color); 
+  color: var(--text-color1);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkout-total-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-game-background-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+
+.checkout-total-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+.checkout-total-item span {
+  font-size: 1em;
+  font-family: 'Libre Caslon Text', serif;
+  margin: 0;
+}
+
+
+.checkout.total {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--main-game-background-color);
+}
+
+.checkout.total h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.checkout.total h3 .label {
+  text-align: left;
+}
+
+.checkout.total h3 .value {
+  text-align: right;
+}
+
+.checkout.total button.Proceed-to-checkout {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: var(--main-checkout-button-color);
+  color: var(--text-color1);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkout.total button.Proceed-to-checkout:hover {
+  background-color: var(--main-checkout-button-hover-color);
+}
+
+
+/*ASIDE SELECTORS*/
+
+aside {
+    background-color: var(--contact-background-color);
+    order: 4;
+    padding: 50px;
+    color: var(--text-color1);
+}
+
+aside input {
+    background-color: var(--main-background-color);
+    height: 30px;
+}
+
+aside button {
+    height: 30px;
+    width: 100px;
+    transition: 0.5s;
+    border: 2px solid var(--text-color2);
+    cursor: pointer;
+}
+
+aside button:hover {
+    background-color: var(--nav-button-hover-background-color);
+}
+
+/*FOOTER SELECTOR*/
+
+footer {
+    background-color: var(--footer-background-color);
+    order: 5;
+    padding: 30px;
+    color: var(--text-color1);
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-5px, 5px); }
+  50% { transform: translate(5px, -5px); }
+  75% { transform: translate(-5px, 5px); }
+  100% { transform: translate(0); }
+}
+.shake {
+  animation: shake 0.3s;
+}

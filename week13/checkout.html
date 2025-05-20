@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Video Game Store</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <nav>
+            <div class="animate_nav">
+            <h1>Jorge's VideoGame Store</h1>
+            </div>
+
+            <div class="animate_nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li>
+                    <span class="selected" onclick="toggleDropdown()">
+                        GAME LIBRARY <i class="fas fa-angle-down"></i>
+                    </span>
+                    <ul id="genreDropdown" class="dropdown-menu">
+                        <li><a href="rpg.html">RPG</a></li>
+                        <li><a href="action_adventure.html">Action/Adventure</a></li>
+                        <li><a href="horror.html">Horror</a></li>
+                        <li><a href="shooter.html">Shooter</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="checkout" onclick="shakeScreen()">CHECKOUT</span>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+        <main>
+
+            <main>
+                <h1>Checkout:</h1>
+                <div class="checkoutContainer">
+                    <div class="checkout-game">
+                        <img src="images/nier automata.png" alt="nier automata game cover">
+                        <div class="checkout-game-details">
+                            <h3 class="checkout-game-title">Nier Automata</h3>
+                            <h3 class="checkout-original-price"><s>$59.99</s></h3>
+                            <h3 class="checkout-game-price">$39.99</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkoutContainer">
+                    <div class="checkout-game">
+                        <img src="images/elden_ring.png" alt="elden ring game cover">
+                        <div class="checkout-game-details">
+                            <h3 class="checkout-game-title">Elden Ring</h3>
+                            <h3 class="checkout-game-price">$59.99</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkoutContainer">
+                    <div class="checkout-game">
+                        <img src="images/persona_5.png" alt="persona 5 royal game cover">
+                        <div class="checkout-game-details">
+                            <h3 class="checkout-game-title">Persona 5 Royal</h3>
+                            <h3 class="checkout-original-price"><s>$59.99</s></h3>
+                            <h3 class="checkout-game-price">$23.99</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout total">
+                    <h3 class="checkout-total">
+                        <span class="label">Estimated Total:</span>
+                        <span class="value">$123.97</span>
+                    </h3>
+                    <h3 class="checkout-tax">
+                        <span class="label">Tax:</span>
+                        <span class="value">$5.00</span>
+                    </h3>
+                    <h3 class="checkout-shipping">
+                        <span class="label">Shipping:</span>
+                        <span class="value">FREE</span>
+                    </h3>
+                    <h3 class="checkout-full-total">
+                        <span class="label">Calculated Total:</span>
+                        <span class="value">$127.97</span>
+                    </h3>
+                    <button class="Proceed-to-checkout">Proceed To Checkout</button>
+                </div>
+
+            </main>
+
+
+
+        </main>
+
+
+        <aside>
+            <form id="newsletterForm">
+                <h2>Sign Up For Our News Letter</h2>
+                <h5>Please Enter Your Email Address So You're The First To Know For Our Latest Updates</h5>
+                <input type="email" id="emailInput" name="email" placeholder="emailexample@gmail.com" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </aside>
+
+        <footer>
+            <h2>&copy;Copyright 2025 Jorge Auquilla</h2>
+        </footer>
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

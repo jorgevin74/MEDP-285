@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Video Game Store</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="animate_nav">
+            <h1>Jorge's VideoGame Store</h1>
+            </div>
+
+            <div class="animate_nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li>
+                    <span class="selected" onclick="toggleDropdown()">
+                        GAME LIBRARY<i class="fa-solid fa-arrow-down"></i>
+                    </span>
+                    <ul id="genreDropdown" class="dropdown-menu">
+                        <li><a href="rpg.html">RPG</a></li>
+                        <li onclick="shakeScreen()">Action/Adventure</li>
+                        <li><a href="horror.html">Horror</a></li>
+                        <li><a href="shooter.html">Shooter</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="checkout"><a href="checkout.html">CHECKOUT</a></span>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+
+        <section>
+            <h1>Action/Adventure</h1>
+            <h3>This genre contains video games that have a hybrid of features that challenge the player with
+                exploratory gameplay and engages the narrative through emotional journeys set in beautiful environments.
+                Below are some of the video games we have available for this genre.</h3>
+            <img src="images/action_adventure banner.png" alt="action adventure full cover art">
+        </section>
+
+        <main>
+            <h2 class="best-sellers">PS5 Games:</h2>
+            <div class="game-img-box">
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/black myth wukong.png" alt="black myth wukong game cover">
+                        <h3 class="game-title">Black Myth Wukong</h3>
+                        <h3 class="game-price">$59.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/spider man 2.png" alt="spider man 2 game cover">
+                        <h3 class="game-title">Spider Man 2</h3>
+                        <h3 class="game-price">$69.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/gow ragnarok.png" alt="god of war ragnarok game cover">
+                        <h3 class="game-title">God Of War: Ragnarok</h3>
+                        <h3 class="game-price">$69.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/gta 5.png" alt="grand theft auto 5 game cover">
+                        <h3 class="game-title">Grand Theft Auto 5</h3>
+                        <h3 class="game-price">$29.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/jedi survivor order.png" alt="star wars jedi survivor game cover">
+                        <h3 class="game-title">Star Wars: Jedi Survivor</h3>
+                        <h3 class="game-price">$69.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="popular">PS4 Games / Other System Games:</h2>
+            <div class="game-img-box">
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/spider man.png" alt="spider man game cover">
+                        <h3 class="game-title">Spider Man</h3>
+                        <h3 class="game-price">$49.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/the witcher 3.png" alt="The Witcher 3 game cover">
+                        <h3 class="game-title">The Witcher 3</h3>
+                        <h3 class="original-price"><s>$49.99</s></h3>
+                        <h3 class="game-price">$12.49</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/uncharted 4.png" alt="Uncharted 4 game cover">
+                        <h3 class="game-title">Uncharted 4</h3>
+                        <h3 class="game-price">$19.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/legend of zelda 2.png" alt="Legend of Zelda game cover">
+                        <h3 class="game-title">LOZ: Breath Of The Wild</h3>
+                        <h3 class="game-price">$59.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/ghost of tsushima.png" alt="ghost of tsushima game cover">
+                        <h3 class="game-title">Ghost Of Tsushima</h3>
+                        <h3 class="original-price"><s>$69.99</s></h3>
+                        <h3 class="game-price">$23.39</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <form id="newsletterForm">
+                <h2>Sign Up For Our News Letter</h2>
+                <h5>Please Enter Your Email Address So You're The First To Know For Our Latest Updates</h5>
+                <input type="email" id="emailInput" name="email" placeholder="emailexample@gmail.com" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </aside>
+
+        <footer>
+            <h2>&copy;Jorge Auquilla Copyright 2025</h2>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

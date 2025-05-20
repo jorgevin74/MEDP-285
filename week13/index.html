@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Video Game Store</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+
+            <div class="animate_nav">
+            <h1>Jorge's VideoGame Store</h1>
+            </div>
+
+        <div class="animate_nav">
+            <ul>
+                <li onclick="shakeScreen()">HOME</li>
+                <li>
+                    <span class="selected" onclick="toggleDropdown()">
+                        GAME LIBRARY<i class="fa-solid fa-arrow-down"></i>
+                    </span>
+                    <ul id="genreDropdown" class="dropdown-menu">
+                        <li><a href="rpg.html">RPG</a></li>
+                        <li><a href="action_adventure.html">Action/Adventure</a></li>
+                        <li><a href="horror.html">Horror</a></li>
+                        <li><a href="shooter.html">Shooter</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <span class="checkout"><a href="checkout.html">CHECKOUT</a></span>
+                </li>
+            </ul>
+        </div>
+        </nav>
+
+        <section>
+            <h1>HOME</h1>
+            <h3>Welcome to my video game store, here you'll be able to explore the many video games available here, the
+                different genres available, a brief description of them and able to take the ones that interest you and
+                head to checkout! Below here are the best sellers, populars and my favorites</h3>
+            <img src="images/home banner.png" alt="home banner cover art">
+        </section>
+
+        <main>
+            <h2 class="best-sellers">Personal Favorites:</h2>
+
+            <div class="game-img-box">
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/nier automata.png" alt="nier automata game cover">
+                        <h3 class="game-title">Nier Automata</h3>
+                        <h3 class="original-price"><s>$59.99</s></h3>
+                        <h3 class="game-price">$39.99</h3>
+                        <button class="add-to-cart" onclick="confetti()">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/persona_5.png" alt="persona 5 royal game cover">
+                        <h3 class="game-title">Persona 5 Royal</h3>
+                        <h3 class="original-price"><s>$59.99</s></h3>
+                        <h3 class="game-price">$23.99</h3>
+                        <button class="add-to-cart" onclick="confetti()">Add To Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/elden_ring.png" alt="elden ring game cover">
+                        <h3 class="game-title">Elden Ring</h3>
+                        <h3 class="game-price">$59.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/silent hill 2.png" alt="silent hill 2 game cover">
+                        <h3 class="game-title">Silent Hill 2</h3>
+                        <h3 class="game-price">$69.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/resident evil 4.png" alt="resident evil 4 game cover">
+                        <h3 class="game-title">Resident Evil 4</h3>
+                        <h3 class="original-price"><s>$39.99</s></h3>
+                        <h3 class="game-price">$19.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="best-sellers">Best Sellers:</h2>
+
+            <div class="game-img-box">
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/elden_ring.png" alt="elden ring game cover">
+                        <h3 class="game-title">Elden Ring</h3>
+                        <h3 class="game-price">$59.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/resident evil 4.png" alt="resident evil 4 game cover">
+                        <h3 class="game-title">Resident Evil 4</h3>
+                        <h3 class="original-price"><s>$39.99</s></h3>
+                        <h3 class="game-price">$19.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/legend of zelda 2.png" alt="Legend of Zelda game cover">
+                        <h3 class="game-title">LOZ: Breath Of The Wild</h3>
+                        <h3 class="game-price">$59.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/cyberpunk 2077.png" alt="cyberpunk 2077 game cover">
+                        <h3 class="game-title">Cyberpunk 2077</h3>
+                        <h3 class="game-price">$70.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/black myth wukong.png" alt="black myth wukong game cover">
+                        <h3 class="game-title">Black Myth Wukong</h3>
+                        <h3 class="game-price">$59.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="popular">Popular Games:</h2>
+
+            <div class="game-img-box">
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/doom the dark ages.png" alt="doom the dark ages game cover">
+                        <h3 class="game-title">DOOM: The Dark Ages</h3>
+                        <h3 class="game-price">$69.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/rainbow 6 siege.png" alt="Rainbow 6 Siege game cover">
+                        <h3 class="game-title">Rainbow 6 Seige</h3>
+                        <h3 class="game-price">$39.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/elden_ring.png" alt="elden ring game cover">
+                        <h3 class="game-title">Elden Ring</h3>
+                        <h3 class="game-price">$59.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/final fantasy 16.png" alt="final fantasy 16 game cover">
+                        <h3 class="game-title">Final Fantasy 16</h3>
+                        <h3 class="original-price"><s>$69.99</s></h3>
+                        <h3 class="game-price">$49.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+
+                <div class="game-area">
+                    <div class="animate-game">
+                        <img src="images/spider man 2.png" alt="spider man 2 game cover">
+                        <h3 class="game-title">Spider Man 2</h3>
+                        <h3 class="game-price">$69.99</h3>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+            <form id="newsletterForm">
+                <h2>Sign Up For Our News Letter</h2>
+                <h5>Please Enter Your Email Address So You're The First To Know For Our Latest Updates</h5>
+                <input type="email" id="emailInput" name="email" placeholder="emailexample@gmail.com" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </aside>
+
+        <footer>
+            <h2>&copy;Jorge Auquilla Copyright 2025 </h2>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
